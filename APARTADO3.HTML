@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Información con Estilo Humo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Playfair+Display:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Estilos Base */
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #000; /* Fondo Negro */
+            color: #ffffff;
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
+
+        /* FONDO DE HUMO AZUL ANIMADO */
+        .smoke-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: #000;
+            overflow: hidden;
+        }
+
+        .smoke-cloud {
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background: rgba(0, 100, 255, 0.15); /* Azul transparente */
+            filter: blur(100px);
+            border-radius: 50%;
+            animation: moveSmoke 25s infinite alternate ease-in-out;
+        }
+
+        .smoke-cloud:nth-child(2) {
+            background: rgba(0, 50, 150, 0.1);
+            width: 700px;
+            height: 700px;
+            animation-duration: 35s;
+            animation-delay: -10s;
+        }
+
+        @keyframes moveSmoke {
+            0% { transform: translate(-20%, -20%) scale(1); }
+            50% { transform: translate(50%, 20%) scale(1.2); }
+            100% { transform: translate(10%, 60%) scale(0.8); }
+        }
+
+        /* CONTENIDO */
+        .container {
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 60px 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Título: Creativo, Elegante y Formal */
+        .title-theme {
+            text-align: center;
+            font-family: 'Cinzel', serif;
+            font-size: 3rem;
+            color: #f0f0f0;
+            letter-spacing: 4px;
+            margin-bottom: 50px;
+            text-shadow: 0 0 20px rgba(0, 120, 255, 0.6);
+            text-transform: uppercase;
+        }
+
+        /* Apartados para cada párrafo */
+        .section-box {
+            background: rgba(255, 255, 255, 0.04);
+            backdrop-filter: blur(8px);
+            margin-bottom: 40px;
+            padding: 35px;
+            border-radius: 15px;
+            border-left: 4px solid rgba(0, 150, 255, 0.5);
+            transition: 0.3s;
+        }
+
+        .section-box:hover {
+            background: rgba(255, 255, 255, 0.07);
+            border-left: 4px solid #009dff;
+        }
+
+        /* Texto: Elegante e Informal */
+        .info-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            line-height: 1.7;
+            color: #e0e0e0;
+            font-style: italic;
+        }
+
+        .label-num {
+            display: block;
+            font-family: 'Cinzel', serif;
+            font-size: 0.8rem;
+            color: #009dff;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        /* Contenedores Multimedia */
+        .media-box {
+            text-align: center;
+            margin: 60px 0;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 20px;
+            border: 1px solid rgba(0, 150, 255, 0.2);
+        }
+
+        .media-box img, .media-box video {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.9);
+        }
+
+        .media-title {
+            font-family: 'Cinzel', serif;
+            margin-bottom: 15px;
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="smoke-container">
+        <div class="smoke-cloud"></div>
+        <div class="smoke-cloud"></div>
+    </div>
+
+    <div class="container">
+        
+        <h1 class="title-theme">Testimonios de alumnos reales (experiencias reales)</h1>
+
+        <div class="section-box">
+            <span class="label-num">Daniel – Abandonó por problemas económicos en casa</span>
+            <div class="info-text">
+                Yo soy Daniel y cursaba 6° semestre cuando tuve que salirme.Mi papá se quedó sin trabajo y en casa somos 4 hermanos. Empecé a faltar porque conseguí chamba de ayudante en un taller para llevar algo de dinero.Al principio pensaba que solo sería un rato, pero entre las desveladas y el cansancio reprobé 3 materias.Los maestros me dijeron que podía regularizarme,pero ya debía colegiaturas y no alcanzaba para los camiones.Sentí que le fallé a mi mamá.Me dolió dejar la prepa a meses de terminar porque quería ser el primero de mi familia con certificado. Ahora trabajo de tiempo completo, pero sí me arrepiento porque veo que sin prepa no me suben el sueldo ni me dan seguro.
+            </div>
+        </div>
+
+        <div class="section-box">
+            <span class="label-num">Mariana – Iba a abandonar por bajo rendimiento, pero una amiga la motivó a seguir</span>
+            <div class="info-text">
+                Soy Mariana, estoy en 6° semestre y hace 4 meses casi tiro la toalla. Reprobé Matemáticas y Química, y me dio pena con mis papás. 
+                Pensé “ya para qué sigo si no puedo”.Dejé de entrar a clases una semana.Mi mejor amiga,Fernanda, se dio cuenta y fue a mi casa.Me dijo que ella también había reprobado pero que entre las dos le íbamos a echar ganas.Me ayudó a estudiar en las tardes y me acompañó a hablar con el orientador.Hicimos un plan para pasar los extras.Gracias a ella no me salí.Entendí que pedir ayuda no es de débiles.Ahora ya pasé mis materias y voy a graduarme.Si no fuera por esa amistad,hoy no estaría aquí.
+            </div>
+        </div>
+
+        <div class="media-box">
+            <h2 class="media-title"></h2>
+            <img src="CASOS.jpg" alt="Imagen del tema">
+        </div>
+
+        <div class="section-box">
+            <span class="label-num">Luis – Abandonó por situación familiar y embarazo adolescente </span>
+            <div class="info-text">
+                Me llamo Luis y abandoné en 6° semestre.Mi novia y yo fuimos papás a los 17. Cuando nació mi hijo,tuve que buscar trabajo porque sus papás la corrieron de la casa.Yo estudiaba en la tarde y trabajaba en la mañana,pero el bebé se enfermó mucho y ya no podía con las dos cosas.La escuela me quedaba a hora y media y gastaba mucho en pasajes.Hablé con el director para pedir chance, pero necesitaba estar al corriente y ya debía varias materias. Decidí salirme para mantener a mi familia.Fue la decisión más dura porque me faltaba súper poco.Quiero regresar en el sistema abierto cuando mi hijo esté más grande,porque sin prepa no me contratan en ningún lado formal.
+            </div>
+        </div>
+
+        <div class="section-box">
+            <span class="label-num">Andrea – Pensó en dejar la escuela por falta de motivación, pero un maestro la hizo cambiar</span>
+            <div class="info-text">
+                Soy Andrea,de 6° semestre.En quinto me desanimé horrible.Sentía que nada de lo que veía en la escuela me servía.Mis papás siempre me decían “échale ganas”,pero yo no le veía sentido.Empecé a faltar y mis calificaciones bajaron.Un día el profe de Historia me preguntó qué pasaba. Le dije que quería salirme para meterme a trabajar.Él no me regañó.Me contó que él casi deja la prepa, pero un maestro lo metió a un concurso de oratoria y ahí descubrió que le gustaba enseñar.Me invitó a un taller de liderazgo de la escuela.Ahí conocí a otros chavos y entendí que la prepa no solo es memorizar,también es para conocerte.Ese profe me salvó.Ahora ya tengo claro que quiero estudiar psicología y por eso sigo aquí.
+            </div>
+        </div>
+
+        <div class="section-box">
+            <span class="label-num">Jorge – Abandonó por violencia en casa y falta de apoyo  </span>
+            <div class="info-text">
+                Yo soy Jorge y dejé la prepa en 6° semestre. En mi casa había muchos problemas. Mi padrastro tomaba y se ponía agresivo. Varias veces llegué a la escuela sin dormir o con moretones. Me daba vergüenza y me empecé a aislar. Bajé mucho mis calificaciones y los orientadores me mandaron llamar, pero yo no dije nada por miedo. Un día la situación explotó y me fui de mi casa con mi tía a otra ciudad. Allá ya no pude revalidar a tiempo y perdí el semestre. Me faltaban solo 4 meses para terminar. Me siento frustrado porque sé que pude haber pedido ayuda antes. Ahora estoy juntando para entrar a la prepa abierta, porque sin certificado no paso de ayudante de cocina.
+            </div>
+        </div>
+
+        <div class="section-box">
+            <span class="label-num">Karla – Estuvo a punto de salirse por ansiedad, pero el grupo de apoyo escolar la sostuvo</span>
+            <div class="info-text">
+                Me llamo Karla y curso 6° semestre. Desde que empezó el último año me dio una ansiedad muy fuerte. Tenía ataques de pánico antes de los exámenes y sentía que no iba a poder con la universidad. Pensé en salirme porque ya no aguantaba. Falté casi un mes completo. La psicóloga de la prepa marcó a mi casa y me citó. Me canalizó al grupo de apoyo emocional que tienen aquí. Ahí conocí a otros compañeros que sentían lo mismo que yo. Hicimos técnicas de respiración y organización. Mis maestros también me dieron chance de entregar trabajos atrasados. Poco a poco me fui sintiendo mejor. Si no hubiera existido ese espacio, yo no seguía. Hoy ya estoy haciendo mi trámite para la universidad. Aprendí que los problemas de salud mental también son reales y que hablarlos te puede salvar de abandonar.
+            </div>
+        </div>
+
+        <div class="media-box">
+            <h2 class="media-title"></h2>
+            <video controls>
+                <source src="TESTIMONIO.mp4" type="video/mp4">
+                Tu navegador no soporta el formato de video.
+            </video>
+        </div>
+
+    </div>
+
+</body>
+</html>
