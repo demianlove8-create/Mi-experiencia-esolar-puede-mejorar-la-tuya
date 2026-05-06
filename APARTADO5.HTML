@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Información con Estilo Humo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Playfair+Display:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Estilos Base */
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #000; /* Fondo Negro */
+            color: #ffffff;
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
+
+        /* FONDO DE HUMO AZUL ANIMADO */
+        .smoke-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: #000;
+            overflow: hidden;
+        }
+
+        .smoke-cloud {
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background: rgba(0, 100, 255, 0.15); /* Azul transparente */
+            filter: blur(100px);
+            border-radius: 50%;
+            animation: moveSmoke 25s infinite alternate ease-in-out;
+        }
+
+        .smoke-cloud:nth-child(2) {
+            background: rgba(0, 50, 150, 0.1);
+            width: 700px;
+            height: 700px;
+            animation-duration: 35s;
+            animation-delay: -10s;
+        }
+
+        @keyframes moveSmoke {
+            0% { transform: translate(-20%, -20%) scale(1); }
+            50% { transform: translate(50%, 20%) scale(1.2); }
+            100% { transform: translate(10%, 60%) scale(0.8); }
+        }
+
+        /* CONTENIDO */
+        .container {
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 60px 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Título: Creativo, Elegante y Formal */
+        .title-theme {
+            text-align: center;
+            font-family: 'Cinzel', serif;
+            font-size: 3rem;
+            color: #f0f0f0;
+            letter-spacing: 4px;
+            margin-bottom: 50px;
+            text-shadow: 0 0 20px rgba(0, 120, 255, 0.6);
+            text-transform: uppercase;
+        }
+
+        /* Apartados para cada párrafo */
+        .section-box {
+            background: rgba(255, 255, 255, 0.04);
+            backdrop-filter: blur(8px);
+            margin-bottom: 40px;
+            padding: 35px;
+            border-radius: 15px;
+            border-left: 4px solid rgba(0, 150, 255, 0.5);
+            transition: 0.3s;
+        }
+
+        .section-box:hover {
+            background: rgba(255, 255, 255, 0.07);
+            border-left: 4px solid #009dff;
+        }
+
+        /* Texto: Elegante e Informal */
+        .info-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            line-height: 1.7;
+            color: #e0e0e0;
+            font-style: italic;
+        }
+
+        .label-num {
+            display: block;
+            font-family: 'Cinzel', serif;
+            font-size: 0.8rem;
+            color: #009dff;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        /* Contenedores Multimedia */
+        .media-box {
+            text-align: center;
+            margin: 60px 0;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 20px;
+            border: 1px solid rgba(0, 150, 255, 0.2);
+        }
+
+        .media-box img, .media-box video {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.9);
+        }
+
+        .media-title {
+            font-family: 'Cinzel', serif;
+            margin-bottom: 15px;
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="smoke-container">
+        <div class="smoke-cloud"></div>
+        <div class="smoke-cloud"></div>
+    </div>
+
+    <div class="container">
+        
+        <h1 class="title-theme">El papel de la familia y la escuela</h1>
+
+        <div class="section-box">
+            <span class="label-num">La familia y la escuela son un equipo contra el abandono  
+</span>
+            <div class="info-text">
+                Prevenir que un estudiante deje la preparatoria no es solo tarea del alumno. La familia y la escuela deben trabajar juntas porque son las dos redes de apoyo más fuertes que tiene un joven. Cuando padres, madres y maestros se coordinan, detectan a tiempo las señales de riesgo y actúan antes de que el estudiante decida salirse. La UNESCO señala que los programas con colaboración escuela-familia reducen la deserción hasta en 30%.
+            </div>
+        </div>
+
+        <div class="section-box">
+            <span class="label-num">Escuchar y motivar en casa sostiene al estudiante  
+</span>
+            <div class="info-text">
+                El apoyo emocional en casa es la primera barrera contra el abandono. Un ambiente donde el joven se siente escuchado, valorado y no juzgado hace que vea la escuela como un lugar seguro. Esto implica preguntar cómo le fue, celebrar pequeños logros, y evitar comparar con hermanos o regañar solo por calificaciones. El INEE reporta que estudiantes con padres que muestran interés diario en sus estudios faltan 50% menos a clases. El apoyo no es hacerle la tarea, es darle confianza. Frases como “cuéntame qué se te complicó” abren más puertas que “¿por qué reprobaste otra vez?”.
+            </div>
+        </div>
+
+        <div class="media-box">
+            <h2 class="media-title"></h2>
+            <img src="PAPEL.jpg" alt="Imagen del tema">
+        </div>
+
+        <div class="section-box">
+            <span class="label-num">Hablar con maestros evita problemas antes de que crezcan  
+</span>
+            <div class="info-text">
+                La comunicación con docentes permite entender qué pasa realmente en el salón. Muchos padres solo van a la escuela cuando ya hay un problema grave. Lo ideal es asistir a juntas, responder mensajes y pedir cita con tutores al menos una vez por parcial. Los maestros pueden avisar si el alumno falta, se aísla o baja calificaciones. En México, el programa de Tutorías de la SEP indica que cuando hay contacto mensual familia-escuela, el riesgo de abandono baja 45%. No se trata de vigilar, sino de aliarse. Un mensaje al docente diciendo “en casa está pasando esto, ¿cómo lo apoyamos?” cambia todo.
+            </div>
+        </div>
+
+        <div class="section-box">
+            <span class="label-num">Revisar avances juntos mantiene al alumno enfocado  
+</span>
+            <div class="info-text">
+                El seguimiento académico desde casa no significa revisar diario la mochila, sino estar pendiente de entregas, exámenes y calificaciones. Pedir al joven que muestre su plataforma escolar, firmar boletas y poner reglas claras de horarios ayuda a crear rutina. Cuando los padres conocen las fechas importantes, pueden recordar o dar apoyo sin invadir. La OCDE encontró que estudiantes con seguimiento familiar constante tienen el doble de probabilidad de terminar la preparatoria. Esto también implica gestionar juntos: si hay materias reprobadas, buscar asesorías, cursos o regularización antes de que se acumulen.
+            </div>
+        </div>
+
+        <div class="section-box">
+            <span class="label-num">La comunidad también educa y protege la permanencia  
+</span>
+            <div class="info-text">
+                El papel de la comunidad refuerza lo que hacen familia y escuela. Vecinos, familiares, iglesias, centros comunitarios y empleadores pueden ofrecer redes de apoyo. Becas municipales, talleres gratuitos, espacios seguros para hacer tarea o empleos de medio tiempo compatibles con la escuela evitan que el alumno deje los estudios. Cuando un negocio local prefiere contratar estudiantes y les da horario flexible, previene la deserción por trabajo. La escuela no es una isla: si toda la comunidad valora la educación y tiende la mano, el mensaje para el joven es claro: “no estás solo y terminar sí es posible”.
+            </div>
+        </div>
+
+        
+
+    </div>
+
+</body>
+</html>
