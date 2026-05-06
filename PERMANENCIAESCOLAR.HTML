@@ -1,0 +1,154 @@
+<!DOCTYPE HTML><!--doc en html-->
+<script src="yuri.js"></script>
+<HTML LANG="ES"><!--doc en español-->
+<HEAD>
+<meta charset="UFT-8"><!--codifica caracteres-->
+<meta neme="viewport" content="width=device-width, initial-scale=1.0"><!--ajusta el diseño a moviles-->
+<title> PROYECTO PEC</title><!--titulo que aparece en la pestaña-->
+<style>
+ body {
+    margin: 0; /*elimina margenes por defecto */
+    font-family: Arial, sans-serif;/*fuente de texto */
+    color: white;
+    /* Fondo de espacio */
+    background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+/* Capa de estrellas animadas */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    background: transparent url('https://www.transparenttextures.com/patterns/stardust.png') repeat;
+    background-size: 500px;
+    animation: moveStars 100s linear infinite;
+    z-index: -1; /* Se mantiene detrás de todo */
+    opacity: 0.5;
+}
+
+@keyframes moveStars {
+    from { transform: translate(0, 0); }
+    to { transform: translate(-50%, -50%); }
+}
+
+/*estilo del menu principal */
+nav{
+   background: rgba(0, 0, 255, 0.8);/* fondo azul con transparencia */
+   backdrop-filter: blur(5px); /* efecto de cristal */
+   position: relative;
+   z-index: 10;
+}
+nav ul {
+   list-style: none;/*quita viñetas de la lista */
+   margin: 0;/*elimina margenes */
+   padding: 0; /*elimina relleno */
+   display: flex;/*coloca los <li> en linea (horizontal) */
+   align-items: center;
+}
+nav ul li {
+   position: relative;/*necesario para posicionar el submenu debajo */
+}
+nav ul li a {
+   display: block;/*ase que todo el area sea clickeable */
+   padding: 15px 20px; /*espacio interno */
+   color: white;/*texto blanco */
+   text-decoration: none;/*quita el subrayado */
+}
+nav ul li a:hover{
+   background: #444;/* cambia el fondo al pasar el raton */
+}
+
+/* Estilo del submenu */
+nav ul li ul{
+   display: none; /*oculta el submenu por defecto */
+   position: absolute; /*posiciona el submenu relativo al padre */ 
+   top: 100%; /* lo coloca justo debajo del elemento padre */
+   left: 0; /* aliniado a la izquirda */
+   background: red; /*fondo del subtema */
+   padding: 0; /*sin espacio interno */
+   min-width: 180px; /* ancho minimo del subtema */
+}
+nav ul li ul li a {
+   padding: 10px 15px; /*espacio interno en las opciones */
+}
+nav ul li ul li a:hover {
+   background: purple; /*coloca mas claro al pasar el raton */
+}
+
+/* mostar el submenu */
+nav ul li:hover > ul {
+   display: block; /*cuando paso el raton sobre el <li> , muestra el submenu */
+}
+
+/* Ajuste para el formulario de búsqueda en el nav */
+nav form {
+    margin-left: 20px;
+}
+</style>
+</head>
+<body>
+   <!--menu principal-->
+   <nav>
+      <ul>
+       <img src="CECYTEM.avif" width="50" height="80" style="margin: 5px;">
+
+       <form method="get" action="https://www.google.com/search" target="_blank">
+          <input type="search" name="q" placeholder="Introducir búsqueda" autofocus required>
+          <input type="submit" value="Buscar">
+       </form>
+
+      <li>
+         <a href="APARTADO1.HTML">¿Por qué ocurre el abandono escolar?</a>
+         <ul>
+            <li><a href=""></a></li>
+         </ul>
+       </li>
+       <li>
+         <a href="APARTADO2.HTML">Consecuencias del abandono escolar</a>
+         <ul>
+            <li><a href=""></a></li>
+         </ul>
+       </li>
+
+       <li>
+         <a href="APARTADO3.HTML">Testimonios de estudiantes (experiencias reales)</a>
+         <ul>
+            <li><a href=""></a></li>
+         </ul>
+       </li>
+
+       <li>
+         <a href="APARTADO4.HTML">¿Cómo prevenir el abandono escolar?</a>
+         <ul>
+            <li><a href=""></a></li>
+         </ul>
+       </li>
+
+       <li>
+         <a href="APARTADO5.HTML">El papel de la familia y la escuela</a>
+         <ul>
+            <li><a href=""></a></li>
+         </ul>
+       </li>
+
+<li>
+         <a href="APARTADO6.HTML">Recursos y apoyos disponible</a>
+         <ul>
+            <li><a href=""></a></li>
+         </ul>
+       </li>
+       
+      </ul>
+     </nav>
+
+     <center>
+       <h1 style="margin-top: 50px;">PROYECTO PEC:MI EXPERIENCIA ESCOLAR PUEDE MEJORAR LA TUYA.</h1>
+     </center>
+   
+   </body>
+   </html>
