@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Información con Estilo Humo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Playfair+Display:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Estilos Base */
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #000; /* Fondo Negro */
+            color: #ffffff;
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
+
+        /* FONDO DE HUMO AZUL ANIMADO */
+        .smoke-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: #000;
+            overflow: hidden;
+        }
+
+        .smoke-cloud {
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background: rgba(0, 100, 255, 0.15); /* Azul transparente */
+            filter: blur(100px);
+            border-radius: 50%;
+            animation: moveSmoke 25s infinite alternate ease-in-out;
+        }
+
+        .smoke-cloud:nth-child(2) {
+            background: rgba(0, 50, 150, 0.1);
+            width: 700px;
+            height: 700px;
+            animation-duration: 35s;
+            animation-delay: -10s;
+        }
+
+        @keyframes moveSmoke {
+            0% { transform: translate(-20%, -20%) scale(1); }
+            50% { transform: translate(50%, 20%) scale(1.2); }
+            100% { transform: translate(10%, 60%) scale(0.8); }
+        }
+
+        /* CONTENIDO */
+        .container {
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 60px 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Título: Creativo, Elegante y Formal */
+        .title-theme {
+            text-align: center;
+            font-family: 'Cinzel', serif;
+            font-size: 3rem;
+            color: #f0f0f0;
+            letter-spacing: 4px;
+            margin-bottom: 50px;
+            text-shadow: 0 0 20px rgba(0, 120, 255, 0.6);
+            text-transform: uppercase;
+        }
+
+        /* Apartados para cada párrafo */
+        .section-box {
+            background: rgba(255, 255, 255, 0.04);
+            backdrop-filter: blur(8px);
+            margin-bottom: 40px;
+            padding: 35px;
+            border-radius: 15px;
+            border-left: 4px solid rgba(0, 150, 255, 0.5);
+            transition: 0.3s;
+        }
+
+        .section-box:hover {
+            background: rgba(255, 255, 255, 0.07);
+            border-left: 4px solid #009dff;
+        }
+
+        /* Texto: Elegante e Informal */
+        .info-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            line-height: 1.7;
+            color: #e0e0e0;
+            font-style: italic;
+        }
+
+        .label-num {
+            display: block;
+            font-family: 'Cinzel', serif;
+            font-size: 0.8rem;
+            color: #009dff;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        /* Contenedores Multimedia */
+        .media-box {
+            text-align: center;
+            margin: 60px 0;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 20px;
+            border: 1px solid rgba(0, 150, 255, 0.2);
+        }
+
+        .media-box img, .media-box video {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.9);
+        }
+
+        .media-title {
+            font-family: 'Cinzel', serif;
+            margin-bottom: 15px;
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="smoke-container">
+        <div class="smoke-cloud"></div>
+        <div class="smoke-cloud"></div>
+    </div>
+
+    <div class="container">
+        
+        <h1 class="title-theme">Recursos y apoyo disponible</h1>
+
+        
+
+        
+
+        
+<div class="media-box">
+            <h2 class="media-title"></h2>
+            <video controls>
+                <source src="TUTO.mp4" type="video/mp4">
+            </video>
+        </div>
+        
+<div class="media-box">
+            <h2 class="media-title"></h2>
+            <video controls>
+                <source src="TUTOR.mp4" type="video/mp4">
+                
+            </video>
+        </div>
+        
+
+        <div class="media-box">
+            <h2 class="media-title"></h2>
+            <video controls>
+                <source src="TUTORIAL.mp4" type="video/mp4">
+                
+            </video>
+        </div>
+
+    </div>
+
+</body>
+</html>
