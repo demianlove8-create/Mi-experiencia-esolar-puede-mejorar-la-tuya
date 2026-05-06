@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Información con Estilo Humo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Playfair+Display:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Estilos Base */
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #000; /* Fondo Negro */
+            color: #ffffff;
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
+
+        /* FONDO DE HUMO AZUL ANIMADO */
+        .smoke-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: #000;
+            overflow: hidden;
+        }
+
+        .smoke-cloud {
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background: rgba(0, 100, 255, 0.15); /* Azul transparente */
+            filter: blur(100px);
+            border-radius: 50%;
+            animation: moveSmoke 25s infinite alternate ease-in-out;
+        }
+
+        .smoke-cloud:nth-child(2) {
+            background: rgba(0, 50, 150, 0.1);
+            width: 700px;
+            height: 700px;
+            animation-duration: 35s;
+            animation-delay: -10s;
+        }
+
+        @keyframes moveSmoke {
+            0% { transform: translate(-20%, -20%) scale(1); }
+            50% { transform: translate(50%, 20%) scale(1.2); }
+            100% { transform: translate(10%, 60%) scale(0.8); }
+        }
+
+        /* CONTENIDO */
+        .container {
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 60px 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Título: Creativo, Elegante y Formal */
+        .title-theme {
+            text-align: center;
+            font-family: 'Cinzel', serif;
+            font-size: 3rem;
+            color: #f0f0f0;
+            letter-spacing: 4px;
+            margin-bottom: 50px;
+            text-shadow: 0 0 20px rgba(0, 120, 255, 0.6);
+            text-transform: uppercase;
+        }
+
+        /* Apartados para cada párrafo */
+        .section-box {
+            background: rgba(255, 255, 255, 0.04);
+            backdrop-filter: blur(8px);
+            margin-bottom: 40px;
+            padding: 35px;
+            border-radius: 15px;
+            border-left: 4px solid rgba(0, 150, 255, 0.5);
+            transition: 0.3s;
+        }
+
+        .section-box:hover {
+            background: rgba(255, 255, 255, 0.07);
+            border-left: 4px solid #009dff;
+        }
+
+        /* Texto: Elegante e Informal */
+        .info-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            line-height: 1.7;
+            color: #e0e0e0;
+            font-style: italic;
+        }
+
+        .label-num {
+            display: block;
+            font-family: 'Cinzel', serif;
+            font-size: 0.8rem;
+            color: #009dff;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        /* Contenedores Multimedia */
+        .media-box {
+            text-align: center;
+            margin: 60px 0;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 20px;
+            border: 1px solid rgba(0, 150, 255, 0.2);
+        }
+
+        .media-box img, .media-box video {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.9);
+        }
+
+        .media-title {
+            font-family: 'Cinzel', serif;
+            margin-bottom: 15px;
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="smoke-container">
+        <div class="smoke-cloud"></div>
+        <div class="smoke-cloud"></div>
+    </div>
+
+    <div class="container">
+        
+        <h1 class="title-theme">¿Cómo prevenir el abandono escolar?</h1>
+
+        <div class="section-box">
+            <span class="label-num">La prevención empieza con hábitos diarios</span>
+            <div class="info-text">
+               Prevenir el abandono escolar depende mucho de las acciones que cada estudiante puede tomar día a día. No se trata solo de “echarle ganas”, sino de usar herramientas concretas que ayudan a mantenerse en la escuela. Cuando un alumno detecta a tiempo que va mal, puede corregir el camino antes de pensar en salirse. Estas estrategias funcionan mejor si se aplican desde el inicio del semestre y no hasta que ya hay problemas.
+            </div>
+        </div>
+
+        <div class="section-box">
+            <span class="label-num">Administrar tu tiempo evita el rezago y el estrés </span>
+            <div class="info-text">
+                La organización del tiempo es clave para no saturarse. Hacer un horario semanal donde separes horas para clases, tareas, descanso y trabajo ayuda a que no se te junte todo. La SEP y expertos en pedagogía recomiendan usar agendas físicas o apps para anotar entregas y exámenes. Dividir proyectos grandes en partes pequeñas evita que te agobies. Estudiantes que planifican su semana faltan 40% menos a clases porque sienten más control. Dormir bien y no dejar todo para el último día también reduce la tentación de abandonar cuando sientes que “ya no la armas”.
+            </div>
+        </div>
+
+        <div class="media-box">
+            <h2 class="media-title"></h2>
+            <img src="PREVENIR.jpg" alt="Imagen del tema">
+        </div>
+
+        <div class="section-box">
+            <span class="label-num">Hablar con tus maestros a tiempo abre soluciones</span>
+            <div class="info-text">
+                Pedir apoyo a docentes marca la diferencia cuando vas atrasado o no entiendes un tema. Los maestros pueden darte asesorías, trabajos extra o explicarte de otra forma. Muchos jóvenes no lo hacen por pena o miedo, pero acercarte en tutorías demuestra interés. Datos de la UNAM muestran que los alumnos que usan las horas de asesoría tienen 60% más probabilidad de pasar materias difíciles. También puedes pedir ayuda a orientadores o prefectos si tienes problemas en casa que afectan tu asistencia. Comunicar a tiempo evita que repruebes por faltas o que te des de baja.
+            </div>
+        </div>
+
+        <div class="section-box">
+            <span class="label-num">Tener un objetivo te mantiene enfocado cuando hay problemas  </span>
+            <div class="info-text">
+                Mantener metas claras te da una razón para no rendirte. Si sabes para qué estudias, es más fácil aguantar días malos. Tu meta puede ser terminar la prepa, entrar a una carrera, poner un negocio o apoyar a tu familia con un mejor trabajo. Escríbela y ponla donde la veas diario. La motivación baja cuando solo “vas porque te mandan”. En cambio, estudiantes con un proyecto de vida definido faltan menos y buscan alternativas antes de salirse. Revisar tu meta cada mes y ajustarla te ayuda a no perder el rumbo.
+            </div>
+        </div>
+
+        <div class="section-box">
+            <span class="label-num">Estudiar con método mejora calificaciones y ánimo</span>
+            <div class="info-text">
+                Las estrategias de estudio evitan la frustración por bajas calificaciones, que es una causa común de abandono. No se trata de pasar horas frente al libro, sino de estudiar mejor. Técnicas como resúmenes, mapas mentales, flashcards y explicar el tema a otra persona aumentan la retención. Estudiar 40 minutos y descansar 10 es más efectivo que desvelarte. Formar grupos de estudio con compañeros también ayuda porque se aclaran dudas entre todos. Según estudios de la Universidad de Guadalajara, alumnos que usan técnicas activas de estudio reprueban 50% menos. Sentir que sí aprendes te quita la idea de “no sirvo para esto” y te mantiene en la escuela.
+            </div>
+        </div>
+
+        
+
+    </div>
+
+</body>
+</html>
