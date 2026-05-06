@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Información con Estilo Humo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Playfair+Display:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Estilos Base */
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #000; /* Fondo Negro */
+            color: #ffffff;
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
+
+        /* FONDO DE HUMO AZUL ANIMADO */
+        .smoke-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: #000;
+            overflow: hidden;
+        }
+
+        .smoke-cloud {
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background: rgba(0, 100, 255, 0.15); /* Azul transparente */
+            filter: blur(100px);
+            border-radius: 50%;
+            animation: moveSmoke 25s infinite alternate ease-in-out;
+        }
+
+        .smoke-cloud:nth-child(2) {
+            background: rgba(0, 50, 150, 0.1);
+            width: 700px;
+            height: 700px;
+            animation-duration: 35s;
+            animation-delay: -10s;
+        }
+
+        @keyframes moveSmoke {
+            0% { transform: translate(-20%, -20%) scale(1); }
+            50% { transform: translate(50%, 20%) scale(1.2); }
+            100% { transform: translate(10%, 60%) scale(0.8); }
+        }
+
+        /* CONTENIDO */
+        .container {
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 60px 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Título: Creativo, Elegante y Formal */
+        .title-theme {
+            text-align: center;
+            font-family: 'Cinzel', serif;
+            font-size: 3rem;
+            color: #f0f0f0;
+            letter-spacing: 4px;
+            margin-bottom: 50px;
+            text-shadow: 0 0 20px rgba(0, 120, 255, 0.6);
+            text-transform: uppercase;
+        }
+
+        /* Apartados para cada párrafo */
+        .section-box {
+            background: rgba(255, 255, 255, 0.04);
+            backdrop-filter: blur(8px);
+            margin-bottom: 40px;
+            padding: 35px;
+            border-radius: 15px;
+            border-left: 4px solid rgba(0, 150, 255, 0.5);
+            transition: 0.3s;
+        }
+
+        .section-box:hover {
+            background: rgba(255, 255, 255, 0.07);
+            border-left: 4px solid #009dff;
+        }
+
+        /* Texto: Elegante e Informal */
+        .info-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            line-height: 1.7;
+            color: #e0e0e0;
+            font-style: italic;
+        }
+
+        .label-num {
+            display: block;
+            font-family: 'Cinzel', serif;
+            font-size: 0.8rem;
+            color: #009dff;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        /* Contenedores Multimedia */
+        .media-box {
+            text-align: center;
+            margin: 60px 0;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 20px;
+            border: 1px solid rgba(0, 150, 255, 0.2);
+        }
+
+        .media-box img, .media-box video {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.9);
+        }
+
+        .media-title {
+            font-family: 'Cinzel', serif;
+            margin-bottom: 15px;
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="smoke-container">
+        <div class="smoke-cloud"></div>
+        <div class="smoke-cloud"></div>
+    </div>
+
+    <div class="container">
+        
+        <h1 class="title-theme">Consecuencias del abandono escolar</h1>
+
+        <div class="section-box">
+            <span class="label-num">Dejar la escuela marca el futuro: panorama general </span>
+            <div class="info-text">
+                No terminar los estudios tiene efectos que se arrastran toda la vida. El impacto no solo es para la persona, sino también para su familia y su comunidad. Cuando un joven abandona la escuela, sus opciones se reducen y los riesgos aumentan. Según la OCDE, las personas sin educación media superior tienen el doble de probabilidad de estar desempleadas que quienes sí la terminan.
+            </div>
+        </div>
+
+        <div class="section-box">
+            <span class="label-num">Acceso limitado al empleo formal y bien pagado</span>
+            <div class="info-text">
+                Las menores oportunidades laborales son la consecuencia más directa. La mayoría de empleos formales piden mínimo preparatoria o bachillerato terminado. Sin ese papel, muchas personas solo pueden acceder a trabajos informales, temporales o mal pagados. En México, el INEGI reporta que quienes no terminaron la preparatoria ganan en promedio 40% menos que quienes sí lo hicieron. Además, datos del IMCO indican que 7 de cada 10 empleos nuevos creados entre 2020 y 2024 exigían estudios de nivel medio superior.
+            </div>
+        </div>
+
+        <div class="media-box">
+            <h2 class="media-title"></h2>
+            <img src="RAREZA.jpg" alt="Imagen del tema">
+        </div>
+
+        <div class="section-box">
+            <span class="label-num">Mayor riesgo de pobreza y falta de seguridad social  </span>
+            <div class="info-text">
+                La inestabilidad económica aparece porque los ingresos son bajos e irregulares. Sin estudios, es más difícil conseguir contratos estables, seguro médico, aguinaldo o ahorro para el retiro. El Banco Mundial estima que cada año adicional de escolaridad aumenta los ingresos de una persona entre 8% y 10%. En América Latina, la CEPAL encontró que los hogares donde el jefe de familia no terminó la secundaria tienen 3 veces más probabilidad de caer en pobreza. Esto se vuelve un ciclo: menos estudios llevan a menos dinero, y menos dinero dificulta que los hijos estudien.
+            </div>
+        </div>
+
+        <div class="section-box">
+            <span class="label-num">Freno al crecimiento personal y autoestima</span>
+            <div class="info-text">
+                Las limitaciones personales también pesan. No terminar la escuela suele generar inseguridad, frustración y la idea de "no puedo". Muchas personas evitan postularse a mejores puestos o tomar cursos porque creen que van a fallar. La UNESCO documenta que los adultos sin educación básica completa reportan niveles más bajos de confianza para participar en su comunidad, tomar decisiones de salud o apoyar a sus hijos con tareas. El abandono escolar limita herramientas como comprensión lectora, pensamiento crítico y manejo de tecnología.
+            </div>
+        </div>
+
+        <div class="section-box">
+            <span class="label-num">Menos desarrollo profesional y movilidad social</span>
+            <div class="info-text">
+                Las limitaciones profesionales cierran puertas a largo plazo. Sin certificado, no se puede entrar a universidad, certificaciones técnicas o concursos de gobierno. Esto frena la movilidad social: los hijos de padres que no terminaron la escuela tienen 65% más probabilidad de repetir la historia, según datos del CEEY en México. En casos reales, programas como Jóvenes Construyendo el Futuro han mostrado que retomar estudios aumenta la probabilidad de conseguir empleo formal en 23%. Terminar la escuela no garantiza éxito, pero no terminar sí garantiza más obstáculos.
+            </div>
+        </div>
+
+        <div class="media-box">
+            <h2 class="media-title"></h2>
+            <video controls>
+                <source src="VITAL.mp4" type="video/mp4">
+                Tu navegador no soporta el formato de video.
+            </video>
+        </div>
+
+    </div>
+
+</body>
+</html>
